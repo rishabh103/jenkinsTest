@@ -12,7 +12,7 @@ class AppTest(TestCase):
         app.blogs = {'Test':b}
         with patch('builtins.print') as mocked_print:
             app.print_blogs()
-            mocked_print.assert_called_with(f'{b.title} is written by {b.author}')
+            mocked_print.assert_called_with(f'{b.title} i written by {b.author}')
     
     def test_input(self):
         b = Blog('Test','Test Author')
@@ -20,4 +20,4 @@ class AppTest(TestCase):
             app.menu()
             mocked_input.assert_called_with(app.MENU_PROMPT)
     
-    
+
